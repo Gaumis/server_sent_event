@@ -13,9 +13,9 @@ async def save_notification(db: Session, data):
         'id': res.id,
         "notification_id": res.notification,
     }
-    await redis_client.publish(
-        "notifications",
-        json.dumps(notification_obj)
-    )
+    # await redis_client.publish(
+    #     "notifications",
+    #     json.dumps(notification_obj)
+    # )
 
     return res
